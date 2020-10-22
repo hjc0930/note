@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{width: 100px; height: 30px;}
+        #box div{width: 300px; border: solid 1px black; display: none;}
+        .active{background-color: orange;}
+    </style>
+    <script>
+        /* window.onload = function(){
+            let oBtn = document.querySelectorAll("button");
+            let oDiv = document.querySelectorAll("#box div");
+
+            for(let i = 0; i < oBtn.length; i++){
+                oBtn[i].onclick = function(){
+
+                    for(let j = 0; j < oBtn.length; j++){
+                        oBtn[j].className = "";
+                        oDiv[j].style.display = "none";
+                    }
+                    oBtn[i].className = "active";
+                    oDiv[i].style.display = "block";
+
+
+                }
+            }
+        } */
+        window.onload = function(){
+            let oBtn = document.querySelectorAll("button");
+            let oDiv = document.querySelectorAll("#box div");
+
+            for(var i = 0; i < oBtn.length; i++){
+                oBtn[i].onclick = (function(index){
+                    return function(){
+                        for(var j = 0; j < oBtn.length; j++){
+                            oBtn[j].className = "";
+                            oDiv[j].style.display = "none";
+                        }
+
+                        oBtn[index].className = "active";
+                        oDiv[index].style.display = "block";
+                    }
+                })(i);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="box">
+        <button class="active">HTML</button>
+        <button>CSS</button>
+        <button>JS</button>
+        <div style="display: block;">HTML称为超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。超文本</div>
+        <div>层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。CSS 能够对..</div>
+        <div>简介：js一般指javascript。JavaScript（简称“JS”） 是一种具有函数优先的轻量级，解释型或即时编译型的高级编程语言。虽然它是作为开发Web页面的脚本语言而出名的，但是它也被用到了很多非浏览器环境中，JavaScript 基于原型编程、多范式的动态脚本语言，并且支.</div>
+    </div>
+</body>
+</html>

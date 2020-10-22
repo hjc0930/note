@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //闭包的实现
+        let a = (function(){
+            let num = 0;
+            return function(){
+                num += 1;
+                return num;
+            }
+        })();
+
+        console.log(a());
+        console.log(a());
+        console.log(a());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
