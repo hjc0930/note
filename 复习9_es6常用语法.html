@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.let,const
+        // let : 块级作用域，不存在变量提升
+        // const:块级作用域，不存在变量提升，必须在声明时就进行初始化
+
+        // 2.模板字符串
+        // let a = `我叫${name},我今年${age}岁`;
+
+
+        // 3.解构
+        // d为undeefined
+        /* let [a,b,c,d] = [1,2,3];
+        console.log(a,b,c,d);
+        */
+        /* let obj = {
+            name: "green",
+            age: 18,
+            sex: "man"
+        }
+        let {name,sex,age} = obj;
+        console.log(name,age,sex); */
+
+        // 4.箭头函数
+        /* 
+            1.本质为匿名函数
+            2.箭头函数内部的this，永远和箭头函数外部的this保持一致
+        */
+        /* ()=>{
+
+        } */
+
+        /* (()=>{
+            console.log(this);
+        })() */
+        /* function add(){
+            console.log(this);
+        }
+        add(); */
+
+        // 5.展开运算符 [...]
+        // 将字符串转为数组
+        /* let str = "123456";
+        let arr = [...str];
+        console.log(arr); */
+        // 合并数组
+        /* let arr1 = [1,2];
+        let arr2 = [3,4];
+        let newArr = [...arr1,...arr2];
+        console.log(newArr); */
+
+        // 6.集合 set,map
+
+        /* let set = new Set([1,2,3]);
+        for (const iterator of set) {
+            console.log(iterator);
+        }
+        let map = new Map([
+            ['a',1],
+            ['b',2],
+            ['c',3]
+        ]);
+        for (const i of map) {
+            console.log(i);
+        } */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
