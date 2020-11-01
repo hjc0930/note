@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{width: 300px;  border: solid 1px black;}
+        #box::after{content: ""; display: block; height: 0; visibility: hidden; clear: both;}
+        #in{width: 100px; height: 100px; background-color: red;float: left;}
+    </style>
+</head>
+<body>
+    <!-- BFC规范 -->
+    <!-- BFC全称为块级格式化上下文,触发BFC规范的元素，可以看成一个独立的容器
+，不会受到外界的影响，从而解决布局上的一些问题
+        触发条件：float除none以外的值
+                绝对定位元素：包括absolute,fixed
+                display为 inline-block,table-cell,flex
+                overflow除 visible以外的所有值
+    -->
+
+    <!-- 清除浮动的方法 -->
+    <!-- BFC规范 -->
+    <!-- 伪类清除 -->
+    <div id="box">
+        <div id="in"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #out{width: 200px; height: 200px; border: solid 1px black;}
+        #in{width: 100px; height: 100px; background-color: black; color: white;}
+
+        /* 水平居中方式 */
+        /* margin: 0 auto */
+        /* #in{margin: 0 auto; text-align: center;} */
+
+        /* margin */
+       /*#in{margin-left: 50px;} */
+
+        /* position */
+      /*  #out{position: relative;}
+       #in{position: absolute; left: 50px;} */
+
+        /* hide */
+       /* #hide{width: 50px; height: 50px; float: left;}
+       #in{float: left; text-align: center;} */
+
+       /* transform */
+       /* #in{transform: translateX(50px); text-align: center;} */
+
+       /* flex */
+       /*  #out{display: flex; flex-direction: column;}
+        #in{align-self: center;} */
+
+        /* 垂直居中的方式 */
+        /* veritcal-align */
+        /* #out{display: table-cell; vertical-align: middle;} */
+
+        /* flex */
+        /* #out{
+            display: flex; 
+            flex-direction: row;
+            align-items: center;
+        } */
+        /* #in{align-self: center;} */
+
+        /* 伪类before */
+        /* #out::before{content: "";display: inline-block;width: 50px; height: 50px;} */
+    </style>
+</head>
+<body>
+    <div id="out">
+        <!-- <div id="hide"></div> -->
+        <div id="in">子</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 块元素和行内元素 -->
+    <!-- 
+        1.块元素独占一行
+        2.块元素可以设置width,height,padding,margin值,在不设置width的情况下，其宽等于父元素的宽
+        3.常见的块级元素：div,p,ul,ol,h1-h6,table,form
+     -->
+     <!-- 
+         1.行内元素不会独占一行，相邻的行内元素会排列在同一行，直到一行排不下才会换行
+         2.其宽度随着元素的内容而变化，行内元素设置的宽高无效，但可以设置line-height来改变高度
+         3.margin,pading水平方向有小，垂直方向padding有特殊效果，具体表现为：不影响位置，但影响视觉
+         4.常见的行内元素：span,strong,b,em,i,a,label
+      -->
+      <!-- <span>这是一个行内元素</span><br>
+      <span style="padding: 10px 0 10px 0; background-color: red;">这是另一个行内元素</span> -->
+      <!-- <b>2222</b>
+      <strong>这是加粗的行内元素</strong>
+      <em>这是有斜体效果的行内元素</em>
+      <i>1111</i> -->
+
+      <!-- meta标签 -->
+      <!-- 
+          1.作用：meat标签是一种功能性标签，用来提供关于html文档的元数据，元数据不会显示在页面上，但对机器是可读的
+          2.常见的meta标签的属性
+            1.charset：声明文档使用的字符编码，这个charset标签一定要写在head标签中的第一行，否则会产生乱码
+            2.name：声明一些浏览器有兼容问题的字段
+            3.http-equiv：添加http头部
+            4.content：描述，当设置了http-equiv或name属性时，就必须添加content属性对其进行描述
+       -->
+
+       <!-- !DOCTYPE标签 -->
+       <!-- 
+           1.DOCTYPE声明位于文档的开头位置，此标签可以告诉浏览器使用哪种HTML或XHTML规范
+
+           标准模式：标准模式的排版和js的运作都是以浏览器支持的最高标准执行的
+           兼容模式：页面会以宽松的，向后兼容的模式执行
+           具体区别：
+            盒模型：标准模式下盒模型的宽是内容的宽，兼容模式下盒模型的宽等于content+padding+border
+            标准模式下对行内元素设置width,height不会生效，兼容模式下对行内元素设置width,height会生效
+            标准模式下，可以使用margin:0 auto进行水平居中，兼容模式下会失效(只能使用text-align)
+        -->
+
+        <!-- script标签下的def和async -->
+        <!-- 
+            def和async都会让script标签延迟解析，一般会等到页面加载完成后再进行解析
+            区别：def是有序的，async是乱序的
+        -->
+</body>
+</html>
