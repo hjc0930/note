@@ -6,17 +6,25 @@
     <title>Document</title>
     <script>
         //闭包的实现
-        let a = (function(){
-            let num = 0;
-            return function(){
-                num += 1;
-                return num;
+        /* let c = (function a(){
+            let num1 = 0;
+            return function b(){
+                return num1 += 1;
             }
         })();
+        console.log(c());
+        console.log(c());
+        console.log(c()); */
 
-        console.log(a());
-        console.log(a());
-        console.log(a());
+        // 回调函数
+        function a(show){
+            let num = 1;
+            show();
+        }
+
+        a(function(){
+            console.log("111");
+        })
     </script>
 </head>
 <body>
