@@ -3,7 +3,6 @@ const fs = require('fs');
 const url = require('url');
 const path = require('path');
 
-
 http.createServer(function (req, res) {
 
     let pathname = url.parse(req.url).pathname;
