@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content::after{display: block; content: ''; clear: both;}
+
+        #aside{width: 200px; height: 500px; background-color: yellow; float: left;}
+        #main{height: 400px; background-color: red; margin-left: 210px;}
+
+        #footer{background-color: gray;}
+    </style>
+</head>
+<body>
+    <section id="content">
+        <aside id="aside"></aside>
+        <main id="main"></main>
+    </section>
+    <footer id="footer">footer</footer>
+</body>
+</html>
