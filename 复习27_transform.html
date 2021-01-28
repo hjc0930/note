@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px; 
+            height: 100px; 
+            background-color: red; 
+            animation: a linear 20s infinite;
+            position: relative;
+            left: 10px;
+            top: 20px;
+        }
+        @keyframes a{
+            0%{transform: rotateZ(0deg);}
+            100%{transform: rotateZ(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* 多条件判断 */
+    // long
+    // if(x === 'a' || x === 'b' || x === 'c' || x === 'd') return;
+    // shor
+    /* function fn(x) {
+      if(['a','b','c','d'].includes(x)) {
+        console.log(true);
+      }
+    }*/
+
+    /* 三目运算符 */
+    // let flat = x > 10? true: false;
+
+    // 变量声明
+    /* let arr1,arr2 = 1;
+    console.log(arr1,arr2); */
+
+    /* 空/未定义检查和分配默认值 */
+    /* if(test1 !== null || test1 !== undefined || test1 !== '') {
+      let test2 = test1;
+    } else {
+      let test2 = '';
+    } */
+    // shor
+    // let test2 = test1 || '';
+
+    /* 给多个变量赋值 */
+    // let [t1, t2, t3] = [1,2,3];
+
+    /* 赋值运算符简写 */
+    // test1 = test1 + 1;
+    // test2 = test2 - 1;
+    // test3 = test3 * 1;
+    // // short
+    // test1++;
+    // test2--;
+    // test3 *=1;
+
+    /* 真值判断 */
+    // if(short === true) {};
+    // // short
+    // if(short){};
+
+    /* 多条件与/或运算 */
+    // if(test1) {
+    //   callMethod();
+    // }
+    // // short
+    // test1 && callMethod();
+    // let a = 1;
+    // function fn() {
+    //   console.log("and");
+    // }
+    // a && fn();
+
+    /* forEath */
+    // let arr = [1,2,3];
+    /* for(let i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }; */
+    // short
+    // arr.forEach(item => console.log(item));
+
+    /* 比较返回值 */
+    // let test;
+   /*  function checkReturn() {
+      if(!(test === undefined)) {
+        return test;
+      } else {
+        return callMe('test');
+      }
+    } */
+
+    /* let data = checkReturn();
+    console.log(data);
+
+    function callMe(val) {
+      console.log(val);
+    }
+    // short
+    function checkReturn() {
+      return test || callMe('test');
+    } */
+
+    /* 箭头函数 */
+    // function add(a,b) {
+    //   return a + b;
+    // }
+    // const add = (a,b) => a + b;
+
+    /* 短函数调用 */
+    // function test1() {
+    //   console.log('test1');
+    // }
+    // function test2() {
+    //   console.log('test2');
+    // }
+
+    // let test3 = 1;
+    // if(test3 === 1) {
+    //   test1();
+    // } else {
+    //   test2();
+    // }
+
+    // short
+    // test3 === 1? test1() : test2();
+    // 短函数
+    // (test3 === 1? test1 : test2)();
+
+    // switch优化
+    // long
+    // switch (data) {
+    //   case 1:
+    //     test1();
+    //     break;
+    //   case 2:
+    //     test2();
+    //     break;
+    //   case 3:
+    //     test3();
+    //     break;
+    //   default:
+    //     break;
+    // }
+    // short
+    // const data = {
+    //   1: test1,
+    //   2: test2,
+    //   3: test3
+    // }
+    // data[key] && data[key]();
+
+    /* 默认参数 */
+    /* function add(test1, test2) {
+      if(test1 === undefined) {
+        test1 = '1';
+      }
+      if( test2 === undefined) {
+        test2 = '2';
+      }
+      return test1 + test2;
+    } */
+
+    // short
+    // const add = (test1 = 1, test2 = 2) => (test1 + test2);
+
+    // 参数比传校验
+    // function hello(obj){
+    //   let {name, age} = obj;
+    //   if(!name){
+    //     console.warn('name is null, pls check!')
+    //     return ''
+    //   }
+    //   if(!age){
+    //     console.warn('age is null, pls check!')
+    //     return ''
+    //   }
+    //   return `${name}: ${age}`
+    // }
+    // short
+    // function fn(obj) {
+    //   let { name = required('name'), age = required('age') } =obj;
+    //   return `${name}:${age}`;
+    // }
+    // function required(key) {
+    //   console.warn(`${key} is null, pls check!`);
+    // }
+    // const result = fn({
+    //   name: '小明'
+    // });
+    // console.log(result);
+
+    /* 扩展运算符 */
+    // 拼接
+    // const test1 = [1,2,3];
+    // const test2 = [4,5,6].concat(test1);
+
+    // short
+    // const test1 = [1,2,3];
+    // const test2 = [4,5,6, ...test1];
+
+    // 克隆
+    // let test1 = [1,2,3];
+    // let test2 = [...test1];
+
+    // Array.find
+    // const data = [
+    //   {
+    //       type: 'test1',
+    //       name: 'abc'
+    //   },
+    //   {
+    //       type: 'test2',
+    //       name: 'cde'
+    //   },
+    //   {
+    //       type: 'test1',
+    //       name: 'fgh'
+    //   },
+    // ]
+    // const result = data.find(data => data.type === 'test1' && data.name === 'fgh');
+    // console.log(result);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
